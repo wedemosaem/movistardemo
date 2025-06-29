@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/demoxwalk/:/",
-    "/content/demoxwalk/configuration:/.helix/config.json",
-    "/content/demoxwalk/metadata:/metadata.json"
+    "/content/movistardemo/:/",
+    "/content/movistardemo/configuration:/.helix/config.json",
+    "/content/movistardemo/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/demoxwalk/"
+    "/content/movistardemo/"
   ]
 }
