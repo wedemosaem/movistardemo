@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p157306-e1665625.adobeaemcloud.com/bin/franklin.delivery/wedemosaem/demoxwalk/main"
+    type: "markup"
+    suffix: ".html"

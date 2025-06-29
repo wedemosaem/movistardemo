@@ -1,0 +1,217 @@
+/* 1) Bleed full viewport width (break out of any parent max-width) */
+.section.ficha-container {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background-color: #000;
+  color: #FFF;
+  padding: 0 !important;
+}
+
+/* 2) Inner flex container */
+.ficha-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3) Columns */
+.ficha-column {
+  box-sizing: border-box;
+  padding: 20px;
+  min-width: 0; /* allow shrinking */
+}
+
+/* 4) 20/80 split */
+.ficha-column-left {
+      justify-content: center;
+    text-align: center;      /* center any inline text */
+      flex: 1 1 25%;
+}
+
+.ficha-column-right {
+  flex: 2 1 75%;
+}
+
+/* 5) Wrap long text */
+.ficha-column p,
+.ficha-column h4 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.ficha-column p {
+  color: #858585;
+}
+
+/* 6) Mobile: stack columns */
+@media (max-width: 768px) {
+  .ficha-column-left,
+  .ficha-column-right {
+    flex: 1 1 100%;
+  }
+}
+
+
+.ficha-rating-text {
+  margin-top: 12px;
+  color: #FFF; 
+}
+
+
+/* Container holding the stars and value */
+.ee .ee-stars {
+  margin: 10px 20px;
+  overflow: hidden;
+  min-width: 273px;
+} :contentReference[oaicite:0]{index=0}
+
+/* Layout for the rating content */
+.rating-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+} :contentReference[oaicite:1]{index=1}
+
+/* “733 votos” block styling */
+.ee .ee-stars .rating-content .rating-value {
+  padding: 7px 0;
+  font-size: .9375rem;
+  font-weight: 700;
+  float: left;
+} :contentReference[oaicite:2]{index=2}
+
+.ee .ee-stars .rating-content .rating-value span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 3px;
+  line-height: 1em;
+} :contentReference[oaicite:3]{index=3}
+
+.ee .ee-stars .rating-content .rating-value .rating {
+  font-size: 1.25rem;
+} :contentReference[oaicite:4]{index=4}
+
+.ee .ee-stars .rating-content .rating-value .ratingC {
+  padding: 0 0 0 16px;
+  position: relative;
+} :contentReference[oaicite:5]{index=5}
+
+.ee .ee-stars .rating-content .rating-value .ratingC:after {
+  content: "-";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: .9375rem;
+} :contentReference[oaicite:6]{index=6}
+
+/* Stars bar label color and spacing */
+.ee .ee-stars .stars {
+  margin-top: 5px;
+  color: #fff;
+} :contentReference[oaicite:7]{index=7}
+
+/* Base star-container */
+.stars {
+  position: relative;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  float: left;
+  height: 22px;
+} :contentReference[oaicite:8]{index=8}
+
+/* Empty star placeholders */
+.stars > span {
+  background-image: url(https://movistarplus.es/assets/images/movistar-plus/star-sprite-white.png);
+  background-position: 0 0;
+  padding: 0;
+  width: 22px;
+  height: 21px;
+  margin: 0 1px;
+  text-indent: -9999px;
+  display: block;
+  float: right;
+  background-size: 22px auto;
+  opacity: .3;
+} :contentReference[oaicite:9]{index=9}
+
+/* Links as stars */
+.stars a,
+.stars div {
+  background-image: url(https://movistarplus.es/assets/images/star.svg);
+  background-position: 0 0;
+  padding: 0;
+  width: 22px;
+  height: 21px;
+  margin: 0 1px;
+  text-indent: -9999px;
+  display: block;
+  float: right;
+  background-size: 22px auto;
+  filter: brightness(0) invert(1);
+  opacity: .3;
+  background-repeat: no-repeat;
+} :contentReference[oaicite:10]{index=10}
+
+/* Filled stars */
+.stars a.fill,
+.stars div.fill {
+  filter: none;
+  opacity: 1;
+} :contentReference[oaicite:11]{index=11}
+
+/* Hover effects: highlight up to the hovered star */
+.stars a.fill:hover,
+.stars a.vote-2:hover ~ a.vote-1,
+.stars a.vote-3:hover ~ a.vote-1,
+.stars a.vote-3:hover ~ a.vote-2,
+.stars a.vote-4:hover ~ a.vote-1,
+.stars a.vote-4:hover ~ a.vote-2,
+.stars a.vote-4:hover ~ a.vote-3,
+.stars a.vote-5:hover ~ a.vote-1,
+.stars a.vote-5:hover ~ a.vote-2,
+.stars a.vote-5:hover ~ a.vote-3,
+.stars a.vote-5:hover ~ a.vote-4,
+.stars a:hover {
+  background-position: center;
+  opacity: 1;
+  filter: brightness(0) invert(1);
+} :contentReference[oaicite:12]{index=12}
+
+/* Invisible numeric label (if used) */
+.stars p {
+  position: absolute;
+  left: 125px;
+  width: 100%;
+} :contentReference[oaicite:13]{index=13}
+
+/* Superscript numbers next to stars */
+.stars span {
+  opacity: .4;
+  line-height: 1.6em;
+  vertical-align: super;
+  position: relative;
+  top: -5px;
+  left: 4px;
+} :contentReference[oaicite:14]{index=14}
+
+/* Precise hover-indent for each rating */
+.stars a.vote-1:hover { text-indent: 126px; }
+.stars a.vote-2:hover { text-indent: 103px; }
+.stars a.vote-3:hover { text-indent: 79px; }
+.stars a.vote-4:hover { text-indent: 55px; }
+.stars a.vote-5:hover { text-indent: 29px; }
+
+/* Hide the overall rating number while hovering */
+.stars:hover ~ .rating-value .rating { opacity: 0; }
+
+/* Show the rating when using stars-votes mode */
+.stars.stars-votes ~ .rating-value .rating { opacity: 1; }
