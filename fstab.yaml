@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p157306-e1665625.adobeaemcloud.com/bin/franklin.delivery/wedemosaem/demoxwalk/main"
+    url: "https://author-p120405-e1277120.adobeaemcloud.com/bin/franklin.delivery/wedemosaem/movistardemo/main"
     type: "markup"
     suffix: ".html"
